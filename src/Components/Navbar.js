@@ -23,11 +23,8 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link to='/cart' className='nav-link active btn btn-primary'>Go to Cart</Link>
-                            </li>
-
                         </ul>
+                        <Link to='/cart' className='btn btn-primary btn-sm mx-3'>Go to Cart</Link>
                         {
                             !localStorage.getItem('token') ? <form className='d-flex' role='search'>
                                 <Link className="btn btn-primary btn-sm ps-3 pe-3 me-5" to='/login'>Login</Link>
