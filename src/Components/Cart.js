@@ -15,12 +15,13 @@ const Cart = () => {
             <h4 className='text-end'>Cart Count: {cart.length}</h4>
             <h4 className='text-end'>Product Total: ${calculateTotal()}</h4>
             <div className='row'>
-                <div className="col-sm">
-                    {cart.map((product) => (
+
+                {cart.map((product) => (
+                    <div className="col-sm">
                         <ProductCard key={product.id} product={product} addToCart={addToCart} />
-                        // <li key={product.id}>{product.title}</li>
-                    ))}
-                </div>
+                    </div>
+                ))}
+
             </div>
         </div>
     )

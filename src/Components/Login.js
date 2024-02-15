@@ -19,7 +19,6 @@ const Login = () => {
             })
         })
         const jsonData = await response.json();
-        console.log(jsonData)
         if (jsonData) {
             localStorage.setItem('token', jsonData.token);
             navigate('/');

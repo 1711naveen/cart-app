@@ -22,14 +22,14 @@ const Home = () => {
             <div className='mt-3 '>
               <div className='my-4'>
 
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">Min Price:</label>
-                  <input type="number" class="form-control" id="exampleFormControlInput1" placeholder='Input Min. Price' onChange={(e) => setMinPrice(Number(e.target.value))} />
+                <div className="mb-3">
+                  <label htmlFor="exampleFormControlInput1" className="form-label">Min Price:</label>
+                  <input type="number" className="form-control" id="exampleFormControlInput1" placeholder='Input Min. Price' onChange={(e) => setMinPrice(Number(e.target.value))} />
                 </div>
 
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">Max Price:</label>
-                  <input type="number" class="form-control" id="exampleFormControlInput1" placeholder='Input Max. Price' onChange={(e) => setMinPrice(Number(e.target.value))} />
+                <div className="mb-3">
+                  <label htmlFor="exampleFormControlInput1" className="form-label">Max Price:</label>
+                  <input type="number" className="form-control" id="exampleFormControlInput1" placeholder='Input Max. Price' onChange={(e) => setMaxPrice(Number(e.target.value))} />
                 </div>
 
               </div>
