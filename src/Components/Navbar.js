@@ -11,10 +11,10 @@ const Navbar = () => {
     }
 
     return (
-        <div>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div style={{fontSize:'1.2em'}}>
+            <nav className="navbar navbar-expand-lg bg-body-tertiary mb-3" data-bs-theme='dark'>
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/">Navbar</Link>
+                    <Link className="navbar-brand" to="/" style={{fontSize:'1.3em'}}>App</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

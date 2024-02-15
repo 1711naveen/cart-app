@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 
-    const [credentials, setCredentials] = useState({ username: "", password: "" });
+    const [credentials, setCredentials] = useState({ username: "kminchelle", password: "0lelplR" });
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
