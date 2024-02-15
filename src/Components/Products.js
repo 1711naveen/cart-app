@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import ProductContext from '../context/products/ProductContext';
 import ProductCard from './ProductCard';
@@ -31,7 +31,7 @@ const Products = (props) => {
                 {
                     props.searchQuery ? filteredProducts.map((product) => {
                         return <ProductCard key={product.id} product={product} addToCart={addToCart} />
-                    }) : products.map((product) => {
+                    }) : products.filter(props.filterByPrice).map((product) => {
                         return <ProductCard key={product.id} product={product} addToCart={addToCart} />
                     })
                 }

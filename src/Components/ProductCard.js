@@ -27,7 +27,7 @@ const ProductCard = (props) => {
                         <Link to="/" className="btn btn-primary btn-sm">
                             ${product.price}
                         </Link>
-                        <Link className='btn btn-primary btn-sm' onClick={() => addToCart(product)}>
+                        <Link to='/cart' className='btn btn-primary btn-sm' onClick={() => addToCart(product)}>
                             <CiShoppingCart style={{ fontSize: "1.5em" }} />
                         </Link>
                     </div>

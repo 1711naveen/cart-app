@@ -5,7 +5,7 @@ const Navbar = () => {
 
     const navigate = useNavigate();
 
-    const handleLogoutClick = ()=>{
+    const handleLogoutClick = () => {
         localStorage.removeItem('token');
         navigate('/login')
     }
@@ -24,9 +24,9 @@ const Navbar = () => {
                                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/">Link</Link>
+                                <Link to='/cart' className='nav-link active btn btn-primary'>Go to Cart</Link>
                             </li>
-                           
+
                         </ul>
                         {
                             !localStorage.getItem('token') ? <form className='d-flex' role='search'>

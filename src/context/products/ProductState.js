@@ -8,7 +8,13 @@ const ProductState = (props) => {
     const [cart, setCart] = useState([]);
 
     const addToCart = (product) => {
-        setCart((prevCart) => [...prevCart, product]);
+        const isInCart = cart.some((item) => item.id === product.id);
+
+        if (!isInCart) {
+            setCart((prevCart) => [...prevCart, product]);
+        } else {
+            console.log(`Product ${product.title} is already in the cart.`);
+        }
     };
 
     //Code to get all products
@@ -20,11 +26,11 @@ const ProductState = (props) => {
         setproducts(jsondata.products);
     }
 
-    
+
 
 
     return (
-        <ProductContext.Provider value={{products, getProducts, cart, addToCart}}>
+        <ProductContext.Provider value={{ products, getProducts, cart, addToCart }}>
             {props.children}
         </ProductContext.Provider>
     )
