@@ -8,6 +8,7 @@ import {
 import Login from './Components/Login';
 import Home from './Components/Home';
 import ProductState from './context/products/ProductState';
+import Cart from './Components/Cart';
 
 function App() {
   return (
@@ -15,10 +16,11 @@ function App() {
       <ProductState>
         <Router>
           <Navbar />
-          <div className="container">
+          <div style={{overflow:'hidden'}}>
             <Routes>
               <Route exact path='/' element={<Home />}></Route>
               <Route exact path='/login' element={<Login />}></Route>
+              <Route exact path="/cart" element={<Cart />} ></Route>
             </Routes>
           </div>
         </Router>
